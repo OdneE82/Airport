@@ -37,27 +37,13 @@ public class Main {
     }
 
     private static void printDepartureStation(HashMap<String, String[]> airports) {
-        int i = 0;
-        for (String key : airports.keySet()) {
-            if (i == airports.size() - 1) {
-                System.out.print(key);
-            } else {
-                System.out.print(key + ", ");
-            }
-            i++;
-        }
-        System.out.println();
+        String joinedDeparture = String.join(",",airports.keySet());
+        System.out.println(joinedDeparture);
     }
 
     private static void printDestination(String[] destinations) {
-        for (int i = 0; i < destinations.length; i++) {
-            if( i == destinations.length -1) {
-                System.out.print(destinations[i]);
-            } else {
-                System.out.print(destinations[i] + ", ");
-            }
-        }
-        System.out.println();
+        String joinedDestination = String.join(",",destinations);
+        System.out.println(joinedDestination);
     }
 
     private static void checkDestination(HashMap<String, String[]> airports, String airport, String destination) {
@@ -75,5 +61,4 @@ public class Main {
             System.out.println("Invalid destination. Please choose a destination from the list above.");
         }
     }
-
 }
