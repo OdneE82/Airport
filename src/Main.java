@@ -1,70 +1,79 @@
+import java.util.HashMap;
 import java.util.Scanner;
+
+/**
+ * Little program to test HashMaps and other features.
+ */
 
 public class Main {
 
-    static String[] BOO = {"BGO", "OSL"};
-    static String[] BGO = {"BGO", "BOO", "FRO"};
-    static String[] OSL = {"BGO", "BOO", "FRO"};
-    static String[] FRO = {"BGO", "OSL"};
-
     public static void main(String[] args) {
 
+        HashMap<String, String[]> airports = initializeAirports();
+
+        System.out.println("Please select your departure airport");
+        printDepartureStation(airports);
+
         Scanner IATA = new Scanner(System.in);
-
-        String airport = IATA.nextLine();
-
+        String airport = IATA.nextLine().toUpperCase();
         System.out.println("From " + airport + " you can travel to: ");
 
-        if(airport.equals("BOO")) {
-            printDestination(BOO);
-        } else if (airport.equals("BGO")) {
-            printDestination(BGO);
-        } else if (airport.equals("OSL")) {
-            printDestination(OSL);
-        } else if (airport.equals("FRO")) {
-            printDestination(FRO);
-        }
+        printDestination(airports.get(airport));
 
         System.out.println("Choose your destination");
-
-        String destination = IATA.nextLine();
-
-        checkDestination(airport, destination);
+        String destination = IATA.nextLine().toUpperCase();
+        checkDestination(airports, airport, destination);
     }
 
-    private static void printDestination(String[] Airport) {
-        for (String dest : Airport) {
-            System.out.println(dest);
-        }
+    private static HashMap<String, String[]> initializeAirports() {
+        HashMap<String, String[]> airports = new HashMap<>();
+
+        airports.put("BOO", new String[] {"BGO", "OSL"});
+        airports.put("BGO", new String[] {"BGO", "BOO", "FRO"});
+        airports.put("OSL", new String[] {"BGO", "BOO", "FRO"});
+        airports.put("FRO", new String[] {"BGO", "OSL"});
+
+        return airports;
     }
 
-    private static void checkDestination(String airport, String destination) {
-        String[] destinations = null;
-        if(airport.equals("BOO")) {
-            destinations = BOO;
-        } else if (airport.equals("BGO")) {
-            destinations = BGO;
-        } else if (airport.equals("OSL")) {
-            destinations = OSL;
-        } else if (airport.equals("FRO")) {
-            destinations = FRO;
-        }
-
-        if (destinations != null) {
-            boolean found = false;
-            for (String dest : destinations) {
-                if (dest.equals(destination)) {
-                    found = true;
-                    break;
-                }
-            }
-            if(found) {
-                System.out.println("Your travel from " + airport + " to " + destination + " is confirmed.");
+    private static void printDepartureStation(HashMap<String, String[]> airports) {
+        int i = 0;
+        for (String key : airports.keySet()) {
+            if (i == airports.size() - 1) {
+                System.out.print(key);
             } else {
-                System.out.println("Route not found, try again");
+                System.out.print(key + ", ");
             }
+            i++;
+        }
+        System.out.println();
+    }
+
+    private static void printDestination(String[] destinations) {
+        for (int i = 0; i < destinations.length; i++) {
+            if( i == destinations.length -1) {
+                System.out.print(destinations[i]);
+            } else {
+                System.out.print(destinations[i] + ", ");
+            }
+        }
+        System.out.println();
+    }
+
+    private static void checkDestination(HashMap<String, String[]> airports, String airport, String destination) {
+        String[] destinations = airports.get(airport);
+        boolean isValidDestination = false;
+        for (String dest : destinations) {
+            if (dest.equals(destination)) {
+                isValidDestination = true;
+                break;
+            }
+        }
+        if (isValidDestination) {
+            System.out.println("Your travel from " + airport + " to " + destination + " is confirmed.");
         } else {
-            System.out.println("Invalid airport, try again");
+            System.out.println("Invalid destination. Please choose a destination from the list above.");
         }
     }
+
 }
