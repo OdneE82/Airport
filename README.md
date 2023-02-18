@@ -1,2 +1,2 @@
 # Airport
-short airport program that lets you select airport to and from.
+Finds shortest path to check for cnx.
