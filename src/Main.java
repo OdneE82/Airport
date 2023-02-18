@@ -16,7 +16,7 @@ public class Main {
         String departure = scanner.nextLine().toUpperCase();
 
         System.out.println("Choose your destination");
-        printArrivalStation(airports);
+        printArrivalStation(airports, departure);
         String arrival = scanner.nextLine().toUpperCase();
 
         List<String> path = findShortestPath(airports, departure, arrival);
@@ -39,11 +39,12 @@ public class Main {
     private static HashMap<String, String[]> initializeAirports() {
         HashMap<String, String[]> airports = new HashMap<>();
 
-        airports.put("BOO", new String[] {"BGO", "OSL"});
-        airports.put("BGO", new String[] {"OSL", "BOO", "FRO"});
-        airports.put("OSL", new String[] {"BGO", "BOO", "FRO"});
+        airports.put("BOO", new String[] {"BGO", "OSL", "ANX"});
+        airports.put("BGO", new String[] {"OSL", "BOO", "FRO", "SVG"});
+        airports.put("OSL", new String[] {"BGO", "BOO", "FRO", "SVG"});
         airports.put("FRO", new String[] {"BGO", "OSL"});
         airports.put("SVG", new String[] {"BGO", "OSL"});
+        airports.put("ANX", new String[] {"BOO"});
 
         return airports;
     }
@@ -53,8 +54,14 @@ public class Main {
         System.out.println(joinedDeparture);
     }
 
-    private static void printArrivalStation(HashMap<String, String[]> airports) {
-        String joinedArrival = String.join(",",airports.keySet());
+
+
+    private static void printArrivalStation(HashMap<String, String[]> airports, String departure) {
+        System.out.println("Please select your arrival airport");
+        String[] arrivalAirports = airports.keySet().stream()
+                .filter(airport -> !airport.equals(departure))
+                .toArray(String[]::new);
+        String joinedArrival = String.join(", ", arrivalAirports);
         System.out.println(joinedArrival);
     }
 
