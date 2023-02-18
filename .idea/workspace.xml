@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa745f02-a9e8-4bf3-9166-5030670742db" name="Changes" comment="Airport with HashMap.">
+    <list default="true" id="fa745f02-a9e8-4bf3-9166-5030670742db" name="Changes" comment="Airport with HashMap.&#10;No longer iterating array.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -82,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674825152308</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Airport with HashMap.&#10;No longer iterating array.">
+      <created>1674826878166</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674826878166</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,6 +109,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Airport" />
     <MESSAGE value="Airport with HashMap." />
-    <option name="LAST_COMMIT_MESSAGE" value="Airport with HashMap." />
+    <MESSAGE value="Airport with HashMap.&#10;No longer iterating array." />
+    <option name="LAST_COMMIT_MESSAGE" value="Airport with HashMap.&#10;No longer iterating array." />
   </component>
 </project>
