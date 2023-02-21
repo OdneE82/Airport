@@ -39,12 +39,49 @@ public class Main {
     private static HashMap<String, String[]> initializeAirports() {
         HashMap<String, String[]> airports = new HashMap<>();
 
-        airports.put("BOO", new String[] {"BGO", "OSL", "ANX"});
-        airports.put("BGO", new String[] {"OSL", "BOO", "FRO", "SVG"});
-        airports.put("OSL", new String[] {"BGO", "BOO", "FRO", "SVG"});
+        airports.put("ALF", new String[] {"BJF", "HFT", "HVG", "KKN", "MEH", "SOJ", "TOS", "VDS"});
+        airports.put("ANX", new String[] {"BOO", "EVE", "SVJ", "TOS"});
+        airports.put("BDU", new String[] {"OSL"});
+        airports.put("BGO", new String[] {"FRO", "BOO", "EVE", "HAU", "KRS", "KSU", "MOL", "OSL", "SDN", "SVG", "TOS", "HOV", "AES"});
+        airports.put("BVG", new String[] {"MEH", "VDS", "BJF", "HFT"});
+        airports.put("BOO", new String[] {"BGO", "SFJ", "TOS", "TRD", "ANX", "LKN", "MQN"});
+        airports.put("BNN", new String[] {"BOO", "OSL", "SSJ", "TRD"});
+        airports.put("BJF", new String[] {"BVG", "HFT", "HVG", "KKN", "MEH", "TOS", "VDS", "VAW"});
         airports.put("FRO", new String[] {"BGO", "OSL"});
-        airports.put("SVG", new String[] {"BGO", "OSL"});
-        airports.put("ANX", new String[] {"BOO"});
+        airports.put("FDE", new String[] {"OSL"});
+        airports.put("HFT", new String[] {"ALF", "BVG", "BJF", "HAA", "HVG", "KKN", "MEH", "TRF", "TOS", "VDS", "VAW"});
+        airports.put("EVE", new String[] {"BGO", "BOO", "TRF", "TOS", "TRD", "ANX"});
+        airports.put("HAA", new String[] {"TOS", "HFT", "HVG", "MEH", "VDS", "KKN"});
+        airports.put("HAU", new String[] {"BGO"});
+        airports.put("HVG", new String[] {"HFT", "KKN", "MEH", "TOS", "VDS"});
+        airports.put("KKN", new String[] {"ALF", "TOS", "VDS", "VAW"});
+        airports.put("KRS", new String[] {"BGO", "SVG", "TRD"});
+        airports.put("KSU", new String[] {"BGO", "KRS", "MOL", "SVG", "TRD"});
+        airports.put("LKL", new String[] {"TOS"});
+        airports.put("LKN", new String[] {"BOO"});
+        airports.put("MEH", new String[] {"BVG", "HFT", "HVG", "KKN", "TOS", "VDS"});
+        airports.put("MQN", new String[] {"BOO", "OSL", "TRD"});
+        airports.put("MOL", new String[] {"BGO", "KSU", "TRD"});
+        airports.put("MJF", new String[] {"BOO", "OSL", "TRD"});
+        airports.put("OSY", new String[] {"OSL", "RVK", "TRD"});
+        airports.put("OSL", new String[] {"BGO", "BOO", "FDE", "RRS", "SDN", "SOG", "TOS", "TRD", "HOV"});
+        airports.put("RRS", new String[] {"OSL"});
+        airports.put("RVK", new String[] {"OSL", "TRD", "OSY"});
+        airports.put("RET", new String[] {"BOO","LKN"});
+        airports.put("SDN", new String[] {"BGO", "FDE", "OSL", "SOG", "HOV"});
+        airports.put("TRF", new String[] {"BGO", "SVG", "TRD", "BOO", "EVE", "TOS"});
+        airports.put("SSJ", new String[] {"BOO", "BNN", "OSL", "RVK", "TRD"});
+        airports.put("SOG", new String[] {"BGO", "FDE", "OSL", "SDN", "HOV"});
+        airports.put("SVG", new String[] {"BGO", "KRS", "TRF"});
+        airports.put("SKN", new String[] {"BOO", "TOS"});
+        airports.put("SVJ", new String[] {"BOO", "RET"});
+        airports.put("SOJ", new String[] {"BVG", "HFT", "KKN", "MEH", "TOS", "VDS"});
+        airports.put("TOS", new String[] {"ALF", "ANX", "BGO", "BVG", "BOO", "BJF", "HFT", "EVE", "EVE", "HAA", "HVG", "KKN", "KRS", "LKL", "LKN", "MEH", "SKN", "SOJ", "VDS", "VAW", "TRF", "SVJ"});
+        airports.put("TRD", new String[] {"BOO", "BNN", "EVE", "KRS", "KSU", "MQN", "MJF", "OSY", "RVK", "TRF", "SSJ", "TOS", "AES"});
+        airports.put("VDS", new String[] {"ALF", "BVG", "BJF", "HFT", "HVG", "KKN", "MEH", "SOJ", "TOS", "VAW"});
+        airports.put("VAW", new String[] {"BVG", "BFJ", "HFT", "KKN", "TOS", "VGS"});
+        airports.put("HOV", new String[] {"BGO", "OSL", "SOG"});
+        airports.put("AES", new String[] {"BGO", "KSU", "TRD"});
 
         return airports;
     }
@@ -54,8 +91,6 @@ public class Main {
         System.out.println(joinedDeparture);
     }
 
-
-
     private static void printArrivalStation(HashMap<String, String[]> airports, String departure) {
         System.out.println("Please select your arrival airport");
         String[] arrivalAirports = airports.keySet().stream()
@@ -64,30 +99,6 @@ public class Main {
         String joinedArrival = String.join(", ", arrivalAirports);
         System.out.println(joinedArrival);
     }
-
-    /**
-    private static void printDestination(String[] destinations) {
-        String joinedDestination = String.join(",",destinations);
-        System.out.println(joinedDestination);
-    }
-
-
-    private static void checkDestination(HashMap<String, String[]> airports, String airport, String destination) {
-        String[] destinations = airports.get(airport);
-        boolean isValidDestination = false;
-        for (String dest : destinations) {
-            if (dest.equals(destination)) {
-                isValidDestination = true;
-                break;
-            }
-        }
-        if (isValidDestination) {
-            System.out.println("Your travel from " + airport + " to " + destination + " is confirmed.");
-        } else {
-            System.out.println("Invalid destination. Please choose a destination from the list above.");
-        }
-    }
-     */
 
     private static List<String> findShortestPath(HashMap<String, String[]> airports, String departure, String arrival) {
         Queue<String> queue = new LinkedList<>();
