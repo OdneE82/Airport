@@ -1,10 +1,20 @@
+package main;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Represents a graph of airports and their connections
+ */
+
 public class AirportGraph {
     private final Map<String, Airport> airports;
+
+    /**
+     * Constructs an java.AirportGraph object and initializes the airports and their connections
+     */
 
     public AirportGraph() {
         airports = new HashMap<>();
@@ -57,9 +67,20 @@ public class AirportGraph {
         airports.put("AES", new Airport("AES", List.of("BGO", "KSU", "TRD")));
     }
 
+    /**
+     * Returns a list of all airport codes in the graph
+     * @return a list of all airport codes.
+     */
+
     public List<String> getAirportCodes() {
         return new ArrayList<>(airports.keySet());
     }
+
+    /**
+     * Returns a list of neighboring airports for the given airport code.
+     * @param airportCode the airport code
+     * @return a list of neighboring airport codes
+     */
 
     public List<String> getNeighbors(String airportCode) {
         Airport airport = airports.get(airportCode);

@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa745f02-a9e8-4bf3-9166-5030670742db" name="Changes" comment="Cleaning">
-      <change afterPath="$PROJECT_DIR$/src/AirportNode.java" afterDir="false" />
+    <list default="true" id="fa745f02-a9e8-4bf3-9166-5030670742db" name="Changes" comment="Improved shortest path algorithm">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Airport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/AirportNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/FlightFinderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AirportGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AirportGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FlightFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FlightFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Airport.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Airport.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Airport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AirportGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AirportGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AirportNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FlightFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/FlightFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,14 +47,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/odne/IdeaProjects/Airport",
     "settings.editor.selected.configurable": "editing.templates"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.FlightFinderTest">
     <configuration name="DotDrawer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DotDrawer" />
       <module name="Airport" />
@@ -63,14 +75,44 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="java.Main" />
       <module name="Airport" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="Airport" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlightFinderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Airport" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.FlightFinderTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FlightFinderTest" />
+        <item itemvalue="Application.main.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.DotDrawer" />
         <item itemvalue="Application.DotPanel" />
@@ -135,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684728673552</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Improved shortest path algorithm">
+      <created>1684730086657</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684730086657</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,7 +205,8 @@
     <MESSAGE value="Airport with HashMap.&#10;Finds shortest path to check for cnx" />
     <MESSAGE value="Removes departure station from arrival station" />
     <MESSAGE value="Cleaning" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaning" />
+    <MESSAGE value="Improved shortest path algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved shortest path algorithm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

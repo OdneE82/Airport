@@ -1,15 +1,36 @@
+package main;
+
 import java.util.*;
+
+/**
+ * java.FlightFinder is responsible for finding the shortest path between airports using Dijkstra's algorithm..
+ */
 
 public class FlightFinder {
     private final AirportGraph airportGraph;
+
+    /**
+     * Constructs a java.FlightFinder object
+     */
 
     public FlightFinder() {
         airportGraph = new AirportGraph();
     }
 
+    /**
+     * Returns the airport graph used by the java.FlightFinder
+     * @return the airport graph
+     */
+
     public AirportGraph getAirportGraph() {
         return airportGraph;
     }
+
+    /**
+     * Finds the shortest path between the departure and arrival airports and prints the path.
+     * @param departure the departure airport code
+     * @param arrival the arrival airport code
+     */
 
     public void findShortestPath(String departure, String arrival) {
         Map<String, Integer> distances = new HashMap<>();
@@ -57,6 +78,10 @@ public class FlightFinder {
     }
 
 
+    /**
+     * Prints the path of the shortest route.
+     * @param path the list of airports in the shortest route.
+     */
     private void printPath(List<String> path) {
         System.out.print("Your travel is: ");
         for (int i = 0; i < path.size(); i++) {
@@ -65,8 +90,15 @@ public class FlightFinder {
                 System.out.print("-");
             }
         }
-        System.out.println("\nThank you for flying with Widerøe!");
     }
+
+    /**
+     * Reconstructs the path from the previousAirports map.
+     *
+     * @param previousAirports the map containing previous airports for each airport
+     * @param current the current airport
+     * @return The reconstructed path
+     */
 
     private List<String> reconstructPath(Map<String, String> previousAirports, String current) {
         List<String> path = new ArrayList<>();
