@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa745f02-a9e8-4bf3-9166-5030670742db" name="Changes" comment="Removes departure station from arrival station">
-      <change afterPath="$PROJECT_DIR$/src/DotDrawer.java" afterDir="false" />
+    <list default="true" id="fa745f02-a9e8-4bf3-9166-5030670742db" name="Changes" comment="Cleaning">
+      <change afterPath="$PROJECT_DIR$/src/Airport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AirportGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FlightFinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -23,6 +25,7 @@
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -39,11 +42,12 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/odne/IdeaProjects/Airport",
-    "settings.editor.selected.configurable": "configurable.group.editor"
+    "settings.editor.selected.configurable": "editing.templates"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.DotDrawer">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="DotDrawer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DotDrawer" />
       <module name="Airport" />
@@ -67,9 +71,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.DotDrawer" />
         <item itemvalue="Application.DotPanel" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -144,6 +148,11 @@
     <MESSAGE value="Airport with HashMap.&#10;No longer iterating array." />
     <MESSAGE value="Airport with HashMap.&#10;Finds shortest path to check for cnx" />
     <MESSAGE value="Removes departure station from arrival station" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removes departure station from arrival station" />
+    <MESSAGE value="Cleaning" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaning" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
