@@ -20,7 +20,7 @@ public class AirportGraph {
         airports.put("BOO", new Airport("BOO", List.of("BGO", "SFJ", "TOS", "TRD", "ANX", "LKN", "MQN")));
         airports.put("BNN", new Airport("BNN", List.of("BOO", "OSL", "SSJ", "TRD")));
         airports.put("BJF", new Airport("BJF", List.of("BVG", "HFT", "HVG", "KKN", "MEH", "TOS", "VDS", "VAW")));
-        airports.put("FRO", new Airport("FRO", List.of("BGO", "OSL")));
+        airports.put("FRO", new Airport("FRO", List.of("BGO")));
         airports.put("FDE", new Airport("FDE", List.of("OSL")));
         airports.put("HFT", new Airport("HFT", List.of("ALF", "BVG", "BJF", "HAA", "HVG", "KKN", "MEH", "TRF", "TOS", "VDS", "VAW")));
         airports.put("EVE", new Airport("EVE", List.of("BGO", "BOO", "TRF", "TOS", "TRD", "ANX")));
